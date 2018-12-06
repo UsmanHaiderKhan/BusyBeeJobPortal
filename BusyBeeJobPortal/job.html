@@ -122,6 +122,7 @@
                 <div class="col-sm-12">
                     <div class="main-panel">
                         <div class="font-family">
+                            <!--======== First Section =======-->
                             <div class="first-section">
                                 <h2 class="main-text">
                                     SENIOR LARAVEL DEVELOPER
@@ -130,10 +131,13 @@
                                         4-December-2018 Lahore, Pakistan
                                     </span>
                                 </h2>
-                                <button class="job-btn" type="button" data-toggle="modal" data-target="#myModal">
-                                    FULL
-                                    TIME
-                                </button>
+                                <div class="display">
+                                    <button class="job-btn" type="button" data-toggle="modal" data-target="#myModal">
+                                        FULL
+                                        TIME
+                                    </button>
+                                </div>
+
                             </div>
                             <!--======== Second Section =======-->
                             <div class="second-section">
@@ -232,7 +236,7 @@
                                                             - 8-December-2018
                                                             <br />
                                                             <span class="fa fa-map-marker animated pulse infinite"
-                                                                  style="margin-left:2px"></span>
+                                                                  style="margin-left: 2px"></span>
                                                             &nbsp; &nbsp;
                                                             Lahore,
                                                             Pakistan
@@ -242,7 +246,7 @@
                                             </div>
                                         </div>
                                         <div class="modal-footer">
-                                            <a href="#apply" id="click-to-apply" data-toggle="apply" class="btn apply-btn" data-dismiss="modal">APPLY</a>
+                                            <a href="#apply" id="click-to-apply modal-close" class="btn apply-btn">APPLY</a>
                                         </div>
                                     </div>
                                 </div>
@@ -432,6 +436,24 @@
     <script src="assets/js/notify/bootstrap-notify-master/bootstrap-notify.min.js"></script>
     <!-- End Portfolio Gallery Scripts -->
     <script type="text/javascript">
+
+        /*=================== Funxtion to Close the Model====================*/
+
+
+        $(function () {
+
+            $("#modal-close").on('click', function () {
+                $("#myModal").modal('hide');
+
+            });
+
+        });
+
+
+
+
+
+
         $(function () {
             $(document).ready(function () {
                 $("#cvform :input").prop("disabled", true);
