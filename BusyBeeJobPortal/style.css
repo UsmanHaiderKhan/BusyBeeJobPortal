@@ -1651,6 +1651,7 @@ footer {
 .set_arrow {
     position: absolute;
     top: 140%;
+    left: 47%;
 }
 
 .g-recaptcha {
