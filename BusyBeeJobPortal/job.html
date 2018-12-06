@@ -131,12 +131,10 @@
                                         4-December-2018 Lahore, Pakistan
                                     </span>
                                 </h2>
-
                                 <button class="job-btn" type="button" data-toggle="modal" data-target="#myModal">
                                     FULL
                                     TIME
                                 </button>
-
                             </div>
                             <!--======== Second Section =======-->
                             <div class="second-section">
@@ -245,7 +243,7 @@
                                             </div>
                                         </div>
                                         <div class="modal-footer">
-                                            <a href="#apply" id="click-to-apply modal-close" class="btn apply-btn">APPLY</a>
+                                            <a href="#apply" id="click-to-apply" class="btn apply-btn">APPLY</a>
                                         </div>
                                     </div>
                                 </div>
@@ -291,7 +289,7 @@
                         </div>
                         <div class="floating-form">
                             <div class="floating-label">
-                                <input name="email" id="email" class="floating-input font-familys" type="text"
+                                <input name="des-your-self" id="des-your-self" class="floating-input font-familys" type="text"
                                        placeholder=" " required="" autocomplete="off">
                                 <span class="highlight"></span>
                                 <label> Describe your self... </label>
@@ -299,18 +297,26 @@
                         </div>
                         <div class="floating-form">
                             <div class="floating-label">
-                                <input name="email" id="email" class="floating-input font-familys" type="text"
-                                       placeholder=" " required="" autocomplete="off">
+                                <input name="des-your-self" id="des-your-self" class="floating-input font-familys" type="text"
+                                       placeholder=" " autocomplete="off">
                             </div>
                         </div>
                         <div class="floating-form">
                             <div class="floating-label">
-                                <input name="email" id="email" class="floating-input font-familys" type="text"
-                                       placeholder=" " required="" autocomplete="off">
+                                <input name="des-your-self" id="des-your-self" class="floating-input font-familys" type="text"
+                                       placeholder=" " autocomplete="off">
                             </div>
                         </div>
+                        <div class="floating-form pt-10">
+                            <div class="floating-label">
+                                <input type="file" name="file-3" id="file-3" class="inputfile" required="" accept="application/pdf" />
+                                <label for="file-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z" /></svg> <span>Choose a file&hellip;</span></label>
+                            </div>
+                        </div>
+                        <div class="mb-10"></div>
                         <div class="row">
-                            <button type="submit" class="btn-upload">Uplod Cv</button>
+                            <button id="register" class="orange btn-hexa" name="submit" type="submit">Upload CV</button>
+                            <!--<button type="submit" class="btn-upload">Uplod Cv</button>-->
                         </div>
                     </form>
                 </div>
@@ -423,6 +429,7 @@
     <script src="assets/plugins/counter-up/jquery.counterup.min.js"></script>
     <script src="assets/js/hexagons.min.js"></script>
     <script src="assets/js/3d-slider.js"></script>
+    <script src="assets/js/custom-file-input.js"></script>
     <script src="assets/js/scripts.js"></script>
     <!-- Portfolio Gallery Scripts -->
     <script src="assets/plugins/portfolio-gallery/js/classie.js"></script>
@@ -447,22 +454,65 @@
             });
 
         });
+        /*** function keep submit button disabled untill all fields is filled ***/
+
+
+        jQuery("#register").prop('disabled', true);
+
+        var toValidate = jQuery('#name, #email, #number, #des-your-self'),
+            valid = false;
+        toValidate.keyup(function () {
+            if (jQuery(this).val().length > 0) {
+                jQuery(this).data('valid', true);
+            } else {
+                jQuery(this).data('valid', false);
+            }
+            toValidate.each(function () {
+                if (jQuery(this).data('valid') == true) {
+                    valid = true;
+                } else {
+                    valid = false;
+                }
+            });
+            if (valid === true) {
+                jQuery("#register").prop('disabled', false);
+            } else {
+                jQuery("#register").prop('disabled', true);
+            }
+        });
 
 
 
 
 
+        //$(function () {
+        //    $('body').on('keyup', 'input', function () {
+        //        var name = $("#name").val();
+        //        var email = $("#email").val();
+        //        var number = $("#number").val();
+        //        var des_your_self = $("#des-your-self").val();
+        //        //var file_3 = $("#file-3").val();
 
+        //        if (name == ' ' || email == ' ' || number == ' ' || des_your_self == ' ') {
+        //            $("#register").prop("disabled", true);
+        //        } else {
+        //            $("#register").prop("disabled", false);
+        //        }
+
+        //    });
+
+
+        /***it will keep the form disable untill it is not click on apply btn***/
         $(function () {
+
             $(document).ready(function () {
                 $("#cvform :input").prop("disabled", true);
             });
             $("#click-to-apply").click(function () {
                 $("#cvform :input").prop("disabled", false);
             });
-
-
         });
+
         /**************nav bar scrolling color**************/
         $(document).ready(function () {
             $(window).scroll(function () {
@@ -475,13 +525,6 @@
             });
         });
         //******************* Finish from Here ********************
-
-
-
-
-
-
-
         new WOW().init();
         $('#ajax-contact').validate({
             /*errorElement: 'span',
