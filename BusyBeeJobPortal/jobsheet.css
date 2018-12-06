@@ -843,7 +843,7 @@ button[disabled]:hover:after {
     .btn-upload:before,
     .btn-upload:after {
         border: 1px solid #2f2f2f;
-        background-color: #d4af37;
+        background-color: #2F2F2F;
     }
 
 
@@ -923,6 +923,12 @@ button[disabled]:hover:after {
         width: 100%;
         margin-left: 10%;
     }
+
+    .set_arrow {
+        position: absolute;
+        top: 120%;
+        left: 47%;
+    }
 }
 
 /* ================ Media Queries ================== */
@@ -984,6 +990,12 @@ button[disabled]:hover:after {
     .custom-footer {
         width: 103%;
     }
+
+    .set_arrow {
+        position: absolute;
+        top: 120%;
+        left: 47%;
+    }
 }
 
 /* Media Query for the I Phone 6/7/8/pluse  414px*/
@@ -994,7 +1006,7 @@ button[disabled]:hover:after {
     }
 
     .main-panel {
-        width: 693px;
+        width: 704px;
         height: auto;
         margin-left: -20px;
     }
@@ -1026,7 +1038,7 @@ button[disabled]:hover:after {
     }
 
     .cv-form {
-        width: 655px;
+        width: 668px;
         height: auto;
         padding: 5% 3% 3% 3%;
     }
@@ -1048,6 +1060,12 @@ button[disabled]:hover:after {
 
     .custom-footer {
         width: 166%;
+    }
+
+    .set_arrow {
+        position: absolute;
+        top: 120%;
+        left: 47%;
     }
 
     /*.display {
@@ -1064,7 +1082,7 @@ button[disabled]:hover:after {
     }
 
     .main-panel {
-        width: 693px;
+        width: 750px;
         height: auto;
         margin-left: -20px;
     }
@@ -1076,7 +1094,7 @@ button[disabled]:hover:after {
         color: white;
         border: 1px solid white;
         border-radius: 25px;
-        margin-left: 114%;
+        margin-left: 127%;
         margin-top: -19%;
         position: absolute;
         font-size: 22px;
@@ -1089,14 +1107,14 @@ button[disabled]:hover:after {
         color: #ff0006;
         border: 1px solid #ff0006;
         border-radius: 25px;
-        margin-left: 114%;
+        margin-left: 127%;
         margin-top: -19%;
         position: absolute;
         font-size: 22px;
     }
 
     .cv-form {
-        width: 655px;
+        width: 715px;
         height: auto;
         padding: 5% 3% 3% 3%;
     }
@@ -1118,6 +1136,12 @@ button[disabled]:hover:after {
 
     .custom-footer {
         width: 179%;
+    }
+
+    .set_arrow {
+        position: absolute;
+        top: 120%;
+        left: 47%;
     }
 }
 
@@ -1129,7 +1153,7 @@ button[disabled]:hover:after {
     }
 
     .main-panel {
-        width: 645px;
+        width: 664px;
         height: auto;
         margin-left: -20px;
     }
@@ -1161,7 +1185,7 @@ button[disabled]:hover:after {
     }
 
     .cv-form {
-        width: 605px;
+        width: 630px;
         height: auto;
         justify-content: center;
         padding: 5% 3% 3% 3%;
@@ -1179,11 +1203,17 @@ button[disabled]:hover:after {
         background-attachment: fixed;
         background-size: cover;
         height: 650px;
-        width: 172%;
+        width: 175%;
     }
 
     .custom-footer {
-        width: 172%;
+        width: 175%;
+    }
+
+    .set_arrow {
+        position: absolute;
+        top: 120%;
+        left: 47%;
     }
 }
 
@@ -1195,7 +1225,7 @@ button[disabled]:hover:after {
     }
 
     .main-panel {
-        width: 645px;
+        width: 660px;
         height: auto;
         margin-left: -20px;
     }
@@ -1227,7 +1257,7 @@ button[disabled]:hover:after {
     }
 
     .cv-form {
-        width: 620px;
+        width: 635px;
         height: auto;
         justify-content: center;
         padding: 5% 3% 3% 3%;
@@ -1250,6 +1280,12 @@ button[disabled]:hover:after {
 
     .custom-footer {
         width: 179%;
+    }
+
+    .set_arrow {
+        position: absolute;
+        top: 120%;
+        left: 47%;
     }
 }
 
@@ -1317,4 +1353,57 @@ button[disabled]:hover:after {
     .custom-footer {
         width: 197%;
     }
+
+    .set_arrow {
+        position: absolute;
+        top: 120%;
+        left: 47%;
+    }
+}
+
+
+
+
+
+/*============ Chosse file styling ============*/
+.inputfile {
+    width: 172px;
+    height: 47px;
+    opacity: 0;
+    overflow-y: hidden;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    top: -8px;
+}
+
+    .inputfile + label {
+        font-size: 1.25em;
+        font-weight: 700;
+        color: white;
+        background-color: #d4af37;
+        padding: 2%;
+        border: 2px solid black;
+        border-radius: 25px;
+        display: inline-block;
+    }
+
+        .inputfile:focus + label,
+        .inputfile + label:hover {
+            background-color: #d4af37;
+        }
+
+    .inputfile + label {
+        cursor: pointer; /* "hand" cursor */
+    }
+
+/*.inputfile + label * {
+            pointer-events: none;
+        }*/
+.pt-10 {
+    padding-top: 10px;
+}
+
+textarea {
+    resize: none;
 }
