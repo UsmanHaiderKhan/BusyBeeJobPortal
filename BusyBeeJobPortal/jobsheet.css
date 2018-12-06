@@ -1049,6 +1049,11 @@ button[disabled]:hover:after {
     .custom-footer {
         width: 166%;
     }
+
+    /*.display {
+        display: block;
+        margin-top: 34%;
+    }*/
 }
 
 /* =============== Media Query for the 411px ====================== */
