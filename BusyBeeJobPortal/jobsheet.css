@@ -620,6 +620,12 @@ button[disabled]:hover:after {
 }
 
 /* =============== Banner Button ================== */
+.set_arrow {
+    position: absolute;
+    top: 104%;
+    left: 49%;
+}
+
 .learn-more {
     height: 58px;
     width: 200px;
@@ -696,7 +702,7 @@ button[disabled]:hover:after {
 .job-btn {
     width: 197px;
     height: 57px;
-    background: #82c24b;
+    background: linear-gradient(360deg, #82c449 50%, #82bf4f 50%, #81ce3f 50%);
     color: white;
     border: 2px solid white;
     border-radius: 25px;
@@ -710,7 +716,7 @@ button[disabled]:hover:after {
 .second-section {
     width: auto;
     border-radius: 0px;
-    border: 1px solid #c4c4c4;
+    border: 1px solid #4a4a4a;
     height: auto;
     background: #e5e5e5;
 }
@@ -769,14 +775,14 @@ button[disabled]:hover:after {
 .apply-btn {
     width: 197px;
     height: 50px;
-    background: #82c24b;
+    background: linear-gradient(360deg, #82c449 50%, #82bf4f 50%, #81ce3f 50%);
     color: white;
     border-radius: 25px;
     font-size: 22px;
 }
 
     .apply-btn:hover {
-        background: #82c24b !important;
+        background: linear-gradient(360deg, #82c449 50%, #82bf4f 50%, #81ce3f 50%);
         color: white !important;
     }
 
@@ -1000,6 +1006,18 @@ button[disabled]:hover:after {
 
 /* Media Query for the I Phone 6/7/8/pluse  414px*/
 @media screen and (max-width:414px) {
+
+
+    .overlay-banner {
+        background-color: rgb(43, 42, 38);
+        opacity: 0.502;
+        position: absolute;
+        width: 166%;
+        height: 650px;
+    }
+
+
+
     .media-text-center {
         width: 100%;
         margin-left: 40%;
